@@ -1,0 +1,253 @@
+<!--
+Program name: patient-form.html
+Author: YOUR NAME (UH roster name)
+Date created: 02/11/2026
+Date last edited: 02/11/2026
+Version: 1.0
+Description: Patient Registration Form for MIS3371 Homework 1.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GreenCare Medical | Patient Registration</title>
+
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
+
+<script>
+function loadDate() {
+    const d = new Date();
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June",
+                    "July","August","September","October","November","December"];
+
+    let dayName = days[d.getDay()];
+    let monthName = months[d.getMonth()];
+    let dayNum = d.getDate();
+    let year = d.getFullYear();
+
+    let suffix = "th";
+    if (dayNum % 10 == 1 && dayNum != 11) suffix = "st";
+    else if (dayNum % 10 == 2 && dayNum != 12) suffix = "nd";
+    else if (dayNum % 10 == 3 && dayNum != 13) suffix = "rd";
+
+    document.getElementById("today").innerHTML =
+        dayName + ", " + monthName + " " + dayNum + suffix + ", " + year;
+}
+</script>
+
+</head>
+
+<body onload="loadDate()">
+
+<!-- HEADER -->
+<div id="header">
+<table width="100%">
+<tr>
+<td width="100">
+<img src="logo.png" alt="GreenCare Medical Logo" id="logo">
+</td>
+
+<td>
+<h1>GreenCare Medical</h1>
+</td>
+
+<td align="right">
+Today is: <span id="today">Loading...</span>
+</td>
+</tr>
+</table>
+</div>
+
+<hr>
+
+<!-- MAIN FORM -->
+<div id="main">
+
+<form action="thankyou.html">
+
+<table class="formTable">
+
+<tr>
+<th colspan="6">Patient Registration Form</th>
+</tr>
+
+<!-- Name Row -->
+<tr>
+<td align="right">First Name *</td>
+<td><input type="text" name="firstName" maxlength="30" required></td>
+
+<td align="right">MI</td>
+<td><input type="text" name="middleInitial" maxlength="1"></td>
+
+<td align="right">Last Name *</td>
+<td><input type="text" name="lastName" maxlength="30" required></td>
+</tr>
+
+<!-- DOB + SSN -->
+<tr>
+<td align="right">Date of Birth *</td>
+<td><input type="text" placeholder="MM/DD/YYYY" required></td>
+
+<td align="right">SSN *</td>
+<td colspan="3">
+<input type="password" minlength="9" maxlength="11"
+placeholder="***-**-****" required>
+</td>
+</tr>
+
+<!-- Address -->
+<tr>
+<td align="right">Address Line 1 *</td>
+<td colspan="5">
+<input type="text" maxlength="30" required>
+</td>
+</tr>
+
+<tr>
+<td align="right">Address Line 2</td>
+<td colspan="5">
+<input type="text" maxlength="30">
+</td>
+</tr>
+
+<!-- City State Zip -->
+<tr>
+<td align="right">City *</td>
+<td><input type="text" maxlength="30" required></td>
+
+<td align="right">State *</td>
+<td>
+<select required>
+<option value="">Select</option>
+<option>TX</option>
+<option>CA</option>
+<option>FL</option>
+<option>NY</option>
+<option>Other</option>
+</select>
+</td>
+
+<td align="right">Zip *</td>
+<td><input type="text" minlength="5" maxlength="10" required></td>
+</tr>
+
+<!-- Email + Phone -->
+<tr>
+<td align="right">Email *</td>
+<td colspan="2">
+<input type="email" placeholder="name@domain.com" required>
+</td>
+
+<td align="right">Phone</td>
+<td colspan="2">
+<input type="text" placeholder="(713)555-1212">
+</td>
+</tr>
+
+<!-- Text Area -->
+<tr>
+<td align="right" valign="top">Describe Symptoms</td>
+<td colspan="5">
+<textarea rows="3" cols="50"
+placeholder="Brief description..."></textarea>
+</td>
+</tr>
+
+<!-- Checkboxes -->
+<tr>
+<td align="right" valign="top">Medical History</td>
+<td colspan="5">
+<input type="checkbox"> Diabetes<br>
+<input type="checkbox"> Asthma<br>
+<input type="checkbox"> Allergies<br>
+<input type="checkbox"> COVID-19<br>
+<input type="checkbox"> High Blood Pressure
+</td>
+</tr>
+
+<!-- Radio Buttons -->
+<tr>
+<td align="right">Gender *</td>
+<td colspan="5">
+<input type="radio" name="gender" required> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+</td>
+</tr>
+
+<tr>
+<td align="right">Vaccinated? *</td>
+<td colspan="5">
+<input type="radio" name="vaccine" required> Yes
+<input type="radio" name="vaccine"> No
+</td>
+</tr>
+
+<tr>
+<td align="right">Have Insurance? *</td>
+<td colspan="5">
+<input type="radio" name="insurance" required> Yes
+<input type="radio" name="insurance"> No
+</td>
+</tr>
+
+<!-- Slider -->
+<tr>
+<td align="right">Health Rating (1-10)</td>
+<td colspan="5">
+<input type="range" min="1" max="10">
+</td>
+</tr>
+
+<!-- User ID + Password -->
+<tr>
+<td align="right">User ID *</td>
+<td colspan="2">
+<input type="text" maxlength="20" required>
+</td>
+
+<td align="right">Password *</td>
+<td colspan="2">
+<input type="password" required>
+</td>
+</tr>
+
+<tr>
+<td align="right">Re-enter Password *</td>
+<td colspan="5">
+<input type="password" required>
+</td>
+</tr>
+
+<!-- Buttons -->
+<tr>
+<td colspan="6" align="center">
+<input type="reset" value="CLEAR AND START OVER">
+&nbsp;&nbsp;&nbsp;
+<input type="submit" value="Submit">
+</td>
+</tr>
+
+</table>
+</form>
+</div>
+
+<hr>
+
+<!-- FOOTER -->
+<div id="footer">
+GreenCare Medical |
+<button onclick="alert('Contact: help@greencare.example')">
+Contact Us
+</button>
+</div>
+
+</body>
+</html>
+
+<!-- End of file -->
