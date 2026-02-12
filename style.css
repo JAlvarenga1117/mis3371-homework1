@@ -1,0 +1,109 @@
+/*
+Program name: style.css
+Author: YOUR NAME (UH roster name)
+Date created: 02/11/2026
+Date last edited: 02/11/2026
+Version: 1.0
+Description: External CSS for MIS3371 Homework 1 Patient Registration Form.
+*/
+
+/* ========================= */
+/* TAG SELECTOR */
+/* ========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6f0ff;   /* NOT default */
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================= */
+/* ID SELECTOR */
+/* ========================= */
+#header {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+}
+
+#main {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ========================= */
+/* CLASS SELECTOR */
+/* ========================= */
+.formTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.formTable th {
+    background-color: #3399ff;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.formTable td {
+    padding: 8px;
+}
+
+/* ========================= */
+/* INPUT STYLING */
+/* ========================= */
+input, select, textarea {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #888;
+    font-size: 14px;
+}
+
+/* NAME SELECTOR example */
+input[name="firstName"] {
+    background-color: #f5faff;
+}
+
+/* ========================= */
+/* BUTTON STYLING */
+/* ========================= */
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* LINK STYLES */
+/* ========================= */
+a:link {
+    color: yellow;
+}
+
+a:visited {
+    color: lightgray;
+}
+
+a:hover {
+    text-decoration: underline;
+}
