@@ -1,25 +1,19 @@
 /*
 Program name: style.css
-Author: YOUR NAME (UH roster name)
+Author: Joel Alvarenga
 Date created: 02/11/2026
 Date last edited: 02/11/2026
 Version: 1.0
 Description: External CSS for MIS3371 Homework 1 Patient Registration Form.
 */
 
-/* ========================= */
-/* TAG SELECTOR */
-/* ========================= */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #e6f0ff;   /* NOT default */
+    background-color: #e6f0ff;   
     margin: 0;
     padding: 0;
 }
 
-/* ========================= */
-/* ID SELECTOR */
-/* ========================= */
 #header {
     background-color: #003366;
     color: white;
@@ -40,11 +34,10 @@ body {
     text-align: center;
 }
 
-/* ========================= */
-/* CLASS SELECTOR */
-/* ========================= */
+
+
 .formTable {
-    width: 100%;
+    width: 60%;
     border-collapse: collapse;
 }
 
@@ -59,9 +52,7 @@ body {
     padding: 8px;
 }
 
-/* ========================= */
-/* INPUT STYLING */
-/* ========================= */
+
 input, select, textarea {
     padding: 6px;
     border-radius: 4px;
@@ -69,14 +60,12 @@ input, select, textarea {
     font-size: 14px;
 }
 
-/* NAME SELECTOR example */
+
 input[name="firstName"] {
     background-color: #f5faff;
 }
 
-/* ========================= */
-/* BUTTON STYLING */
-/* ========================= */
+
 input[type="submit"] {
     background-color: #28a745;
     color: white;
@@ -93,9 +82,7 @@ input[type="reset"] {
     cursor: pointer;
 }
 
-/* ========================= */
-/* LINK STYLES */
-/* ========================= */
+
 a:link {
     color: yellow;
 }
